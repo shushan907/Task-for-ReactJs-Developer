@@ -30,7 +30,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>
-          <div className='container'>
+          <div className='container pt-3'>
             {children}
           </div>
         </main>

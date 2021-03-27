@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import { Navbar, Nav} from "react-bootstrap"
 import NavbarButton from './navbarToggleButton'
-import GetStartedButton from './getStartedButton'
+import LoginGetStartedButton from './loginGetStarted'
 import "../styles/navbar.css"
 
 const NavbarPage = () => {
@@ -48,6 +48,7 @@ const NavbarPage = () => {
           />
         </Navbar.Brand>
       </Link>
+      <LoginGetStartedButton className='login-getStarted-show'/>
       <Navbar.Toggle>
         <NavbarButton/>
       </Navbar.Toggle>
@@ -62,8 +63,7 @@ const NavbarPage = () => {
           )}
         </Nav>
         <Nav>
-          <GetStartedButton />
-          <Link to='/login' className='text-decoration-none text-dark mt-2' style={{fontSize: '15px'}}>Login</Link>
+          <LoginGetStartedButton className='login-getStarted-hide'/>
         </Nav>
       </Navbar.Collapse>
     </div>

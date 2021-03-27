@@ -78,4 +78,28 @@
 .navbar-toggler:focus {
     box-shadow: none !important;
 }
+.login-getStarted-show {
+    display: none;
+}
 
+@media (min-width: 768px) and (max-width: 990px) { 
+    .login-getStarted-show {
+        display: block;
+    }
+    .login-getStarted-hide {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) { 
+    .login-getStarted-hide {
+        display: flex;
+        flex-direction: column-reverse;
+        padding-left: 20px;
+        margin-top: 5px;
+    }
+    .login-getStarted-hide button {
+        display: block !important;
+        margin-top: 20px;
+    }
+}
