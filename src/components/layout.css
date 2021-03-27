@@ -6,18 +6,12 @@ html {
   overflow-y: scroll;
 }
 body {
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
-  word-wrap: break-word;
-  font-kerning: normal;
-  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
-  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
-  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
-  font-feature-settings: "kern", "liga", "clig", "calt";
+  font: 400 16px/26px Poppins,sans-serif;
+  letter-spacing: 0;
+  color: #323537;
+  padding: 0;
+  overflow-x: hidden;
+  z-index: 0;
 }
 article,
 aside,

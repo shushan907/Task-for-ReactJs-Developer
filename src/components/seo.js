@@ -1,11 +1,4 @@
-/**
- * SEO component that queries for data with
- *  Gatsby's useStaticQuery React hook
- *
- * See: https://www.gatsbyjs.com/docs/use-static-query/
- */
-
-import * as React from "react"
+import React, {useEffect, useState} from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
@@ -19,22 +12,39 @@ function SEO({ description, lang, meta, title }) {
             title
             description
             author
+            menuLinks {
+              subTitle
+              link
+            }
           }
         }
       }
     `
-  )
+  );
+
+  const [path, setPath] = useState(null);
+  const [currentTitle, setCurrentTitle] = useState(null);
+  
+  useEffect(() => {
+    setPath(window?.location.pathname);
+  }, [])
+
+  useEffect(() => {
+    site.siteMetadata?.menuLinks?.filter(menu => menu.link === path).length ? 
+    setCurrentTitle(site.siteMetadata?.menuLinks?.filter(menu => menu.link === path)[0].subTitle) 
+    : setCurrentTitle('24/7 AI website monitoring to protect & grow your business');
+  }, [path])
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
-
+  
   return (
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={defaultTitle ? `%s | ${defaultTitle}` : null}
+      titleTemplate={`${defaultTitle} - ${currentTitle}`}
       meta={[
         {
           name: `description`,
