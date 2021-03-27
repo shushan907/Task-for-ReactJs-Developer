@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/navbarButton.css"
 
 const GetStartedButton = () => (
     <button className='get-started-button mr-2'>

@@ -1,5 +1,4 @@
 import React from "react"
-import "../styles/navbarButton.css"
 
 const NavbarButton = () => {
     const change = () => {
@@ -11,10 +10,10 @@ const NavbarButton = () => {
         
     }
   return (
-    <button className="navbar-toggler first-button" onClick={change} type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
+    <span id='navbarButton' className="navbar-toggler first-button" onClick={change} type="button" data-toggle="collapse" data-target="#navbarSupportedContent20"
         aria-controls="navbarSupportedContent20" aria-expanded="false" aria-label="Toggle navigation">
         <div className="animated-icon1"><span></span><span></span><span></span></div>
-    </button> 
+    </span> 
 )}
 
 export default NavbarButton

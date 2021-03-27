@@ -33,7 +33,7 @@ function SEO({ description, lang, meta, title }) {
     site.siteMetadata?.menuLinks?.filter(menu => menu.link === path).length ? 
     setCurrentTitle(site.siteMetadata?.menuLinks?.filter(menu => menu.link === path)[0].subTitle) 
     : setCurrentTitle('24/7 AI website monitoring to protect & grow your business');
-  }, [path])
+  }, [site.siteMetadata?.menuLinks, path])
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title

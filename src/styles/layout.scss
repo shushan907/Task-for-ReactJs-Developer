@@ -1,0 +1,22 @@
+@import './variable.scss';
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: 112.5%/1.45em georgia, serif, sans-serif;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+body {
+  font: 400 16px/26px Poppins,sans-serif;
+  letter-spacing: 0;
+  color: $mainGrey;
+  padding: 0;
+  overflow-x: hidden;
+  z-index: 0;
+}
+@media only screen and (max-width: 480px) {
+  html {
+    font-size: 100%;
+  }
+}
