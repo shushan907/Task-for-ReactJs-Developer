@@ -1,8 +1,8 @@
 import React from "react"
 
-const GetStartedButton = () => (
+const GetStartedButton = ({title}) => (
     <button className='get-started-button mr-2'>
-        Get Started for Free
+        {title ? title : 'Get Started for Free'}
     </button> 
 )
 

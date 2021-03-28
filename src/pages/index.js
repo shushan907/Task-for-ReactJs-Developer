@@ -1,28 +1,47 @@
 import * as React from "react"
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Typewriter from '../components/typewriter'
+import HexometerInformation from '../components/hexometrInformation'
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Hexometer" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["AUTO", "WEBP", "AVIF"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-    </p>
+    <div className='row'>
+      <Typewriter />
+      <HexometerInformation />
+      <div className='col-12 col-md-6'>
+        <StaticImage
+          src="../images/grafics.png"
+          alt='grafics'
+        />
+      </div>
+      <div className='col-12'>
+        Trusted by 15,000+ businesses & compatible with over 100+ platforms
+      </div>
+      <div className='col-12'>
+      </div>
+      <div className='col-12 col-md-6'>
+        <div className='row'>
+          <div className='col-12 col-md-6'>
+
+          </div>
+          <div className='col-12 col-md-6'>
+
+          </div>
+          <div className='col-12 col-md-6'>
+
+          </div>
+          <div className='col-12 col-md-6'>
+
+          </div>
+        </div>
+      </div>
+      <div className='col-12 col-md-6'>
+
+      </div>
+    </div>
   </Layout>
 )
 
