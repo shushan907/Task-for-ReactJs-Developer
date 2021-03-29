@@ -21,7 +21,7 @@ const HomePage = () => (
             />
         </div>
         <div className='col-12'>
-            <h4 className='text-center my-3'>Trusted by 15,000+ businesses & compatible with over 100+ platforms</h4>
+            <p className='text-center my-3 main-info'>Trusted by 15,000+ businesses & compatible with over 100+ platforms</p>
         </div>
         <div className='col-12 my-5'>
             <Slick />
