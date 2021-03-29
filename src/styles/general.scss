@@ -1,0 +1,34 @@
+@import './variable.scss';
+
+//Home page
+#homePage {
+    #hexometer-info {
+        p {
+            margin-bottom: 1rem;
+        }
+        .main-info {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 30px;
+        }
+    }
+    @media screen and (max-width: 767px) { 
+        #hexometer-info {
+            p {
+                text-align: center;
+            }
+        }
+        #rating-container {
+            div {
+                text-align: center;
+            }
+        }
+    }
+}
+
+// slick slider
+#slider-image-container {
+    outline: none !important;
+}

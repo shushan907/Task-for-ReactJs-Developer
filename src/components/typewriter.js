@@ -2,7 +2,7 @@ import React from "react"
 import Typewriter from 'typewriter-effect';
 
 const TypewriterPage = () => (
-    <div className='col-12 d-flex mb-3' id='typewriter_page'>
+    <>
         <div>Beyond&nbsp;</div>
         <Typewriter
             options={{
@@ -11,7 +11,7 @@ const TypewriterPage = () => (
                 loop: true,
             }}
         />
-    </div>
+    </>
 )
 
 export default TypewriterPage
