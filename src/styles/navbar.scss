@@ -60,7 +60,13 @@
             display: none;
         }
     }
-
+    @media (min-width: 991px) and (max-width: 1200px) { 
+        .login-getStarted-hide {
+            .get-started-button {
+                width: 120px !important;
+            };
+        }
+    }
     .get-started-button {
         font-size: 14px !important;
         padding: 8px 15px!important;

@@ -11,10 +11,10 @@ const HomePage = () => (
         <div id='typewriter_page' className='col-12 d-flex mb-3'>
             <Typewriter />
         </div>
-        <div id='hexometer-info' className='col-12 col-md-6'>
+        <div id='hexometer-info' className='col-12 col-lg-6'>
             <HexometerInformation />
         </div>
-        <div className='col-12 col-md-6'>
+        <div className='col-12 col-lg-6'>
             <StaticImage
                 src="../images/grafics.png"
                 alt='grafics'
