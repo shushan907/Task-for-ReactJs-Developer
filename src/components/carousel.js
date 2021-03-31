@@ -43,7 +43,7 @@ export default class CustomCarusel extends Component {
   }
 
   componentDidMount () {
-    //this.next();
+    this.next();
   };
  
   componentWillUnmount () {
@@ -51,7 +51,6 @@ export default class CustomCarusel extends Component {
   }
 
   render() {
-    
     return (
       <div 
         style={{ width: "80%", height: "100%", margin: "0 auto" }} 
