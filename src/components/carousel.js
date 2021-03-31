@@ -23,11 +23,11 @@ export default class CustomCarusel extends Component {
   });
 
   next = () => {
-    this.state && setInterval(() => {
+    setInterval(() => {
         this.setState( prevState => ({
           goToSlide: prevState.goToSlide - 1, 
         }));
-    }, 10000)
+    }, 7000)
   };
 
   handelClickNext = () => {
@@ -47,7 +47,7 @@ export default class CustomCarusel extends Component {
   };
  
   componentWillUnmount () {
-      clearInterval(this.next);
+    clearInterval(this.next);
   }
 
   render() {

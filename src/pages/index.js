@@ -8,8 +8,8 @@ const IndexPage = () =>{
   useEffect(() => {
     window && setWindowObject(window)
   }, [])
-  
-  if (!windowObject) return null
+
+  if (!windowObject) return null;
   return(
     <Layout>
       <SEO title="Hexometer" />
