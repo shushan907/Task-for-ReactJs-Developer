@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from "react"
 import {Link, useStaticQuery, graphql } from "gatsby"
-import PropTypes from "prop-types"
 import { StaticImage } from "gatsby-plugin-image"
 import { Navbar, Nav} from "react-bootstrap"
 import NavbarButton from './navbarToggleButton'
@@ -15,6 +14,10 @@ const NavbarPage = () => {
             menuLinks {
               name
               link
+              dropdown {
+                name
+                link
+              }
             }
           }
         }
@@ -34,7 +37,7 @@ const NavbarPage = () => {
     })
   }, [])
 
-  const menuLinks=data.site.siteMetadata.menuLinks;
+  const menuLinks = data.site.siteMetadata.menuLinks;
 
   return (
   <Navbar id='navbar-page' variant="light" expand="lg" fixed="top" className='bg-white' style={{boxShadow: scrolTop ? '0 4px 6px 0 rgb(12 0 46 / 6%)' : 'none'}}>
@@ -54,11 +57,22 @@ const NavbarPage = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mx-auto">
           {menuLinks?.map(menuLink => 
-            <Link key={menuLink.name} to={menuLink.link}>
-              <Nav.Link as="span" eventKey={menuLink.link} className={path?.includes(menuLink.link) ? 'active-link' : ''}>
-                {menuLink.name}
-              </Nav.Link>
-            </Link>
+            <React.Fragment key={menuLink.name}>
+              {!menuLink.dropdown ? 
+                <Link to={menuLink.link}>
+                  <Nav.Link as="span" eventKey={menuLink.link} className={path?.includes(menuLink.link) ? 'active-link' : ''}>
+                    {menuLink.name}
+                  </Nav.Link> 
+                </Link>
+                :
+                <Link className="dropdown" to=''>
+                  <Nav.Link>{menuLink.name}</Nav.Link>
+                    <div className="dropdown-content">
+                      {menuLink.dropdown?.map(item => (<Link key={item.name} to={item.link}>{item.name}</Link>))}
+                    </div>
+                </Link>
+              }
+            </React.Fragment>
           )}
         </Nav>
         <Nav>
@@ -68,15 +82,5 @@ const NavbarPage = () => {
     </div>
   </Navbar>
 )}
-
-Navbar.propTypes = {
-  name: PropTypes.string,
-  link: PropTypes.string,
-}
-
-Navbar.defaultProps = {
-  name: '',
-  link: ''
-}
 
 export default NavbarPage

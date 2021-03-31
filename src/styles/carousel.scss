@@ -1,0 +1,60 @@
+// @import './variable.scss';
+
+.carousel-container {
+    //carousel 
+    .css-1fzpoyk {
+        opacity: 1 !important;
+        img {
+            box-shadow: 0 13px 26px rgb(0 0 0 / 30%), 0 12px 6px rgb(0 0 0 / 20%);
+            min-height: 70px !important;
+        }
+    }
+    .btn-courusel {
+        background-color: $mainColor;
+    }
+    //next - back buttons
+    .MuiIconButton-root {
+        color: white !important;
+        background-color: $mainColor !important;
+        padding: 5px !important;
+        position: absolute !important;
+        top: 40%;
+        z-index: 100
+    }
+    .MuiSvgIcon-root {
+        font-size: 1.1rem !important;
+    }
+    .arrow-next {
+        right: 8%;
+        display: none;
+    }
+    .arrow-back {
+        left: 8%;
+        display: none;
+    }
+    &:hover {
+        .arrow-next {
+            display: block;
+        }
+        .arrow-back {
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 450px) { 
+        min-height: 80px;
+    }
+    @media (min-width: 451px) and (max-width: 600px) { 
+        min-height: 120px;
+    }
+    @media (min-width: 601px) and (max-width: 767px) { 
+        min-height: 150px;
+    }
+    @media (min-width: 768px) and (max-width: 850px) { 
+        max-height: 125px;
+    }
+    @media (min-width: 851px) and (max-width: 990px) { 
+        max-height: 140px;
+        width: 100% !important;
+    }
+}

@@ -11,8 +11,17 @@ module.exports = {
       },
       {
         name: 'Solutions',
-        link: '/page-2',
-        subTitle: 'Solutions'
+        subTitle: 'Solutions',
+        dropdown: [
+          {
+            name: 'E-Commerce and retail',
+            link: '/page-2-1'
+          },
+          {
+            name: 'Agencies',
+            link: '/page-2-2'
+          }
+        ]
       },
       {
         name: 'Pricing',

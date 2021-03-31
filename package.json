@@ -1,12 +1,13 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "test",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Test project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "<shushan907@gmail.com>",
   "dependencies": {
     "@fontsource/poppins": "^4.2.2",
     "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2",
     "@material-ui/lab": "^4.0.0-alpha.57",
     "@popperjs/core": "^2.9.1",
     "bootstrap": "^5.0.0-beta3",
